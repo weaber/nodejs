@@ -31,7 +31,7 @@ const requestHandler = (req, res) => {
             const message = parsedBody.split('=')[1];
             fs.writeFile('message.txt', message, err => {
                 res.statusCode = 302;
-                res.setHeader('Location', '/');
+                res.setHeader('Location', '/');                
                 return res.end();
             });
         });
