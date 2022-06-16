@@ -1,5 +1,15 @@
-const http = require('http');
+const express = require('express');
 
-const server = http.createServer();
+const app = express();
 
-server.listen(3000);
+app.use('/users', (req, res, next) => {
+    console.log('users middleware', req.originalUrl);
+    res.send('<p>This is a /users page</p>');
+});
+
+app.use('/', (req, res, next) => {
+    console.log('/ middleware', req.originalUrl);
+    res.send('<p>This is a / page</p>');    
+});
+
+app.listen(3000);
