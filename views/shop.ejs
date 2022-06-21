@@ -25,13 +25,15 @@
         <h1>My Products</h1>
         <p>Product list...</p>
 
-        <!-- <div class="grid">
+        <% if (prods.length > 0) { %>
+        <div class="grid">
+            <% for (let product of prods) { %>
             <article class="card product-item">
                 <header class="card__header">
-                    <h1 class="product-title">Great Book</h1>
+                    <h1 class="product-title"><%= product.title %></h1>
                 </header>
                 <div class="card__image">
-                    <img src="http://place-hold.it/400x400" alt="Book Image">
+                    <img src="http://place-hold.it/300x300" alt="Book Image">
                 </div>
                 <div class="card__content">
                     <h2 class="product__price">$19.99</h2>
@@ -41,7 +43,13 @@
                     <button class="btn">Add to Cart</button>
                 </div>
             </article>
-        </div> -->
+            <% } %>
+        </div>
+
+        <% } else { %>
+            <h1>Products not found!</h1>
+        <% } %>
+        
     </main>    
 </body>
 </html>
