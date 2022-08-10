@@ -134,12 +134,15 @@ color: white;
 }
 
 .form-control label, 
-.form-control input {
+.form-control input,
+.form-control textarea {
     display: block;
     width: 100%;
+    margin-bottom: 0.25rem;
 }
 
-.form-control input {
+.form-control input,
+.form-control textarea {
     border: 1px solid rgb(134, 190, 43);
     font: inherit;
     border-radius: 2px;
