@@ -11,8 +11,8 @@ const getProductsFromFile = (cb) => {
     fs.readFile(storePath, (err, fileContent) => {
         if (err) {
             return cb([]);
-        }
-        cb(JSON.parse(fileContent));
+        } 
+        cb(JSON.parse(fileContent));        
     })      
 }
 
